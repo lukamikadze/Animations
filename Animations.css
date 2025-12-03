@@ -1,0 +1,91 @@
+body {
+  background: rgb(255, 255, 255);
+  padding: 40px;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+.slide-up {
+  width: 200px;
+  height: 60px;
+  background: rgb(1, 44, 2);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+
+  transform: translateY(50px);
+  opacity: 0;
+
+  animation: slideUp 1.5s forwards;
+}
+
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+    opacity: 5;
+  }
+}
+
+.bounce {
+  width: 200px;
+  height: 60px;
+  background: rgb(3, 118, 212);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+
+  animation: bounce 1.2s infinite;
+}
+
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  20% { transform: translateY(0); }
+  40% { transform: translateY(20px); }
+  60% { transform: translateY(10px); }
+  80% { transform: translateY(30px); }
+  100% { transform: translateY(0); }
+}
+
+.spin {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 6px solid rgb(78, 72, 64);
+  margin-top: 40px;
+
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(-180deg);}
+
+  to { transform: rotate(180deg); }
+}
+
+.floating {
+  width: 150px;
+  height: 60px;
+  background: rgb(156, 39, 176);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
